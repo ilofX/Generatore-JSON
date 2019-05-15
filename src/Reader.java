@@ -64,6 +64,8 @@ public class Reader implements Runnable {
                 this.mf.logEvent("Parsed object " + splitString[0]);
             }
         }
+        if (array != null && !provincia.equals(""))
+            this.object.put(provincia, array);
         this.mf.setObject(this.object);
         this.read.close();
         mf.samRelease();
